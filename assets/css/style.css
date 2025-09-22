@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/background.jpg);
+  background-size: contain;
+  font-family: Inter;
+}
+
+.main-container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr 1fr 8fr 1fr;
+  grid-template-areas:
+    "nav"
+    "header"
+    "section"
+    "main"
+    "footer";
+}
+
+aside {
+  display: none;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+nav img {
+  width: 80px;
+  margin: 5px 5px 1px 5px;
+}
+
+.bars {
+  color: #fdf0d3;
+  padding-right: 10px;
+}
+
+header {
+  grid-area: header;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/header.png);
+  background-size: cover;
+}
+
+header h1 {
+  color: rgb(77, 88, 117);
+  font-size: 35px;
+  font-weight: normal;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+}
+
+header p {
+  color: rgb(77, 88, 117);
+  font-size: 17px;
+  font-weight: normal;
+  text-align: center;
+  padding: 20px 30px;
+}
+
+section {
+  grid-area: section;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  color: #fdf0d3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+section h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  padding: 20px;
+}
+
+.main-services {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services h3 {
+  background-color: transparent;
+  color: #fdf0d3;
+  margin: 10px;
+  padding: 6px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.content {
+  overflow: hidden;
+}
+
+.content img {
+  width: 100%;
+  height: 300px;
+}
+
+.image,
+.text {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: transparent;
+  color: #fdf0d3;
+  font-size: 30px;
+  opacity: 0;
+}
+
+.content:hover .image {
+  opacity: 0;
+}
+
+.content:hover .text {
+  opacity: 1;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+footer p {
+  color: #fdf0d3;
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media (min-width: 576px) {
+  .main-container {
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 9fr 1fr;
+    grid-template-areas:
+      "nav header"
+      "aside section"
+      "aside main"
+      "footer footer";
+  }
+
+  nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  }
+
+  nav img {
+    width: 15vh;
+  }
+
+  .bars {
+    display: none;
+  }
+
+  aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    background-color: #fdf0d3;
+    color: rgb(77, 88, 117);
+  }
+
+  aside a {
+    text-decoration: none;
+  }
+
+  button {
+    background-color: transparent;
+    color: rgb(77, 88, 117);
+    margin: 10px;
+    padding: 6px;
+    font-size: 22px;
+    font-weight: lighter;
+    border-color: transparent;
+    transition: color 0.3s ease-in;
+  }
+
+  button:hover {
+    color: rgb(173, 121, 57);
+  }
+
+  main {
+    grid-area: main;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #gallery {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .card {
+    padding: 5px;
+  }
+
+  .card img {
+    width: 350px;
+    height: auto;
+  }
+}
