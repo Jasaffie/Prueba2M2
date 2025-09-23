@@ -109,6 +109,11 @@ section h2 {
   font-weight: lighter;
 }
 
+.services a {
+  color: #fdf0d3;
+  text-decoration: none;
+}
+
 main {
   grid-area: main;
   display: grid;
@@ -121,6 +126,7 @@ main {
   align-items: center;
   width: 100%;
   position: relative;
+  padding-top: 5px;
 }
 
 .content {
@@ -170,6 +176,13 @@ footer {
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
 
+footer h4 {
+  color: #fdf0d3;
+  font-size: 15px;
+  font-weight: lighter;
+  padding: 5px;
+}
+
 footer p {
   color: #fdf0d3;
   font-size: 12px;
@@ -178,7 +191,15 @@ footer p {
 }
 
 footer a {
+  color: #fdf0d3;
   text-decoration: none;
+}
+
+footer h5 {
+  color: #fdf0d3;
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 5px;
 }
 
 @media (min-width: 576px) {
@@ -215,10 +236,10 @@ footer a {
     align-items: center;
     padding-top: 40px;
     background-color: #fdf0d3;
-    color: rgb(77, 88, 117);
   }
 
   aside a {
+    color: rgb(77, 88, 117);
     text-decoration: none;
   }
 
@@ -254,7 +275,7 @@ footer a {
   }
 
   .card {
-    padding: 5px;
+    padding: 5px 5px 0px 5px;
   }
 
   .card img {

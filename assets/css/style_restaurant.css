@@ -38,9 +38,15 @@ nav img {
   margin: 5px 5px 1px 5px;
 }
 
-.bars {
+.index {
+  font-size: 20px;
   color: #fdf0d3;
   padding-right: 10px;
+}
+
+.index a {
+  color: #fdf0d3;
+  text-decoration: none;
 }
 
 header {
@@ -76,9 +82,9 @@ main {
 }
 
 .box {
-  width: 400px;
+  width: 375px;
   height: 300px;
-  margin-top: 30px;
+  margin-top: 10px;
   animation-name: box;
   animation-iteration-count: infinite;
   animation-duration: 20s;
@@ -130,9 +136,8 @@ main button {
   background-color: rgb(77, 88, 117);
   border-color: #fdf0d3;
   color: #fdf0d3;
-  margin: 0px;
-  padding: 0px;
-  font-size: 40px;
+  margin: 10px;
+  font-size: 30px;
   transition: background-color color 0.3s ease;
 }
 
@@ -151,6 +156,13 @@ footer {
   background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
 
+footer h4 {
+  color: #fdf0d3;
+  font-size: 15px;
+  font-weight: lighter;
+  padding: 5px;
+}
+
 footer p {
   color: #fdf0d3;
   font-size: 12px;
@@ -159,7 +171,15 @@ footer p {
 }
 
 footer a {
+  color: #fdf0d3;
   text-decoration: none;
+}
+
+footer h5 {
+  color: #fdf0d3;
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 5px;
 }
 
 @media (min-width: 576px) {
@@ -174,18 +194,14 @@ footer a {
   }
 
   nav {
-    grid-area: nav;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   }
 
   nav img {
     width: 15vh;
   }
 
-  .bars {
+  .index {
     display: none;
   }
 
@@ -198,8 +214,9 @@ footer a {
     background-color: #fdf0d3;
     color: rgb(77, 88, 117);
   }
-
-  aside a {
+  
+    aside a {
+    color: rgb(77, 88, 117);
     text-decoration: none;
   }
 
